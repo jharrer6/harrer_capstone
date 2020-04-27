@@ -90,7 +90,6 @@ p6 <- ggplot(df, aes(r, B6)) + geom_point()
 
 #BMP plots
 (plot_grid(p1, p2, p3, p4, p5, p6))
-![image](https://user-images.githubusercontent.com/64428723/80419225-bc1a2480-88a6-11ea-8653-df9ed52d60a9.png)
 
 p7 <- ggplot(df, aes(r, F1)) + geom_point()
 p8 <- ggplot(df, aes(r, F2)) + geom_point()
@@ -101,7 +100,6 @@ p12 <- ggplot(df, aes(r, F6)) + geom_point()
 
 #FK506 plots
 (plot_grid(p7, p8, p9, p10, p11, p12))
-![image](https://user-images.githubusercontent.com/64428723/80419212-b6244380-88a6-11ea-975b-516f79c4730e.png)
 
 p13 <- ggplot(df, aes(r, E1)) + geom_point()
 p14 <- ggplot(df, aes(r, E2)) + geom_point()
@@ -112,11 +110,14 @@ p18 <- ggplot(df, aes(r, E6)) + geom_point()
 
 #No Treatment plots
 (plot_grid(p13, p14, p15, p16, p17, p18))
-![image](https://user-images.githubusercontent.com/64428723/80419199-af95cc00-88a6-11ea-80d5-d3be93ddfc9b.png)
 
 #view rotation values
 #view(df$r) 
 ```
+![image](https://user-images.githubusercontent.com/64428723/80419225-bc1a2480-88a6-11ea-8653-df9ed52d60a9.png)
+![image](https://user-images.githubusercontent.com/64428723/80419212-b6244380-88a6-11ea-975b-516f79c4730e.png)
+![image](https://user-images.githubusercontent.com/64428723/80419199-af95cc00-88a6-11ea-80d5-d3be93ddfc9b.png)
+
 **All plots are linear between -80 degrees and reach max torque by -75 degrees. The drop indicates when the bone breaks. Bone stiffness is calculated by the slope of the linear region of the force vs displacement curve before the bone breaks, which is between -80 degrees and -75 degrees for all plots. Therefore, to see if there is a difference in bone stiffness we must compare the slopes of the plots between -80 and -75 degrees. Using the view command, we see -80 is at point 110 and -75 is at point 160.**
 
 ```{r}
@@ -195,6 +196,7 @@ paste(pwr.pct, sep="", "% power.")
 ggplot(data.frame(pval))+
   geom_histogram(aes(pval), color="#d28e00")+
   labs(x="p-value")
+![image](https://user-images.githubusercontent.com/64428723/80419415-1f0bbb80-88a7-11ea-9e08-8ed649a76239.png)
 
 nSims <- 100 #number of simulated experiments
 p <- c()
