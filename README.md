@@ -114,9 +114,9 @@ p18 <- ggplot(df, aes(r, E6)) + geom_point()
 #view rotation values
 #view(df$r) 
 ```
-![image](https://user-images.githubusercontent.com/64428723/80419225-bc1a2480-88a6-11ea-8653-df9ed52d60a9.png)
-![image](https://user-images.githubusercontent.com/64428723/80419212-b6244380-88a6-11ea-975b-516f79c4730e.png)
-![image](https://user-images.githubusercontent.com/64428723/80419199-af95cc00-88a6-11ea-80d5-d3be93ddfc9b.png)
+![image](https://user-images.githubusercontent.com/64428723/80420738-419ed400-88a9-11ea-8561-a507781184b1.png)
+![image](https://user-images.githubusercontent.com/64428723/80420745-45caf180-88a9-11ea-8702-822417f2b8d1.png)
+![image](https://user-images.githubusercontent.com/64428723/80420758-4bc0d280-88a9-11ea-8733-c0c50b406d6d.png)
 
 **All plots are linear between -80 degrees and reach max torque by -75 degrees. The drop indicates when the bone breaks. Bone stiffness is calculated by the slope of the linear region of the force vs displacement curve before the bone breaks, which is between -80 degrees and -75 degrees for all plots. Therefore, to see if there is a difference in bone stiffness we must compare the slopes of the plots between -80 and -75 degrees. Using the view command, we see -80 is at point 110 and -75 is at point 160.**
 
