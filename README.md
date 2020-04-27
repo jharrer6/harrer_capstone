@@ -90,6 +90,7 @@ p6 <- ggplot(df, aes(r, B6)) + geom_point()
 
 #BMP plots
 (plot_grid(p1, p2, p3, p4, p5, p6))
+![image](https://user-images.githubusercontent.com/64428723/80419225-bc1a2480-88a6-11ea-8653-df9ed52d60a9.png)
 
 p7 <- ggplot(df, aes(r, F1)) + geom_point()
 p8 <- ggplot(df, aes(r, F2)) + geom_point()
@@ -100,6 +101,7 @@ p12 <- ggplot(df, aes(r, F6)) + geom_point()
 
 #FK506 plots
 (plot_grid(p7, p8, p9, p10, p11, p12))
+![image](https://user-images.githubusercontent.com/64428723/80419212-b6244380-88a6-11ea-975b-516f79c4730e.png)
 
 p13 <- ggplot(df, aes(r, E1)) + geom_point()
 p14 <- ggplot(df, aes(r, E2)) + geom_point()
@@ -108,8 +110,9 @@ p16 <- ggplot(df, aes(r, E4)) + geom_point()
 p17 <- ggplot(df, aes(r, E5)) + geom_point()
 p18 <- ggplot(df, aes(r, E6)) + geom_point()
 
-#BMP plots
+#No Treatment plots
 (plot_grid(p13, p14, p15, p16, p17, p18))
+![image](https://user-images.githubusercontent.com/64428723/80419199-af95cc00-88a6-11ea-80d5-d3be93ddfc9b.png)
 
 #view rotation values
 #view(df$r) 
@@ -168,6 +171,7 @@ p <- p + stat_summary(fun.data = min.mean.sd.max, geom = "boxplot") +
   geom_jitter(position=position_jitter(width=.2), size=3)
 p
 ```
+![image](https://user-images.githubusercontent.com/64428723/80419133-8ecd7680-88a6-11ea-8dd5-6a198b7cb038.png)
 
 **Step 9: Write and perform a Monte Carlo analysis to calculate sample size necessary to test the hypothesis.**
 
