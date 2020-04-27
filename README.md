@@ -192,7 +192,23 @@ pval <- replicate(
   )
 pwr.pct <- sum(pval<0.05)/sims*100
 paste(pwr.pct, sep="", "% power.")
+```
+[1] "100% power."
+```{r}
+ezANOVA(data = Stiff,
+        dv = Stiffness,
+        wid = id,
+        between = Treatment,
+        detailed=T,
+        type=2)
+pairwise.t.test(x = Stiff$Stiffness, 
+                g = Stiff$Treatment, 
+                p.adjust = "bonf", 
+                paired = FALSE,
+                pooled.sd=TRUE)
+```
 
+```{r}
 ggplot(data.frame(pval))+
   geom_histogram(aes(pval), color="#d28e00")+
   labs(x="p-value")
@@ -218,9 +234,10 @@ for(i in 1:nSims){ #for each simulated experiment
 # the output
 hits <- length(which(p < alpha)); paste("hits=", hits)
 power <- hits/nSims; paste("power=", power)
-
 ```
+[1] "hits= 7"
+[1] "power= 0.07"
 
 **Step 10: Write in RMarkdown, knit, and submit**
-
+Didn't see a place for analysis anywhere else so I'm going to include it here: P-values are below the type 1 error threshold between BMP and no treatment (p=8.2e-10) and FK506 and no treatment (1.8e-09), meaning both treatments are significantly different than no treatment. The p-value between BMP and FK506 is 1 meaning there is effectively no difference between these groups. This means we can conclude that there is no evidence of a difference between BMP and FK506 treatments (One-way CR ANOVA, pairwise t-test, p-value adjustment method: bonferroni).
 
